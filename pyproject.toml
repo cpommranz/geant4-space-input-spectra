@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "geant4_space_input_spectra"
+authors = [
+    {name = "Christian Pommranz", email = "christian@pommranz.de"},
+]
+description = "Convert and create input spectra for radiation environments in space for the Geant4 GPS."
+readme = "README.md"
+requires-python = ">=3.8"
+keywords = ["Geant4", "Space", "Spectra"]
+license = {text = "AGPLv3"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    "astropy==5.3.4",
+    "click==8.1.7",
+    "matplotlib==3.8.1",
+    "scipy==1.11.3",
+]
+version = "0.1"
+
+[project.scripts]
+geant4_space_input_spectra = "geant4_space_input_spectra:cli"
+gsis = "geant4_space_input_spectra:cli"
